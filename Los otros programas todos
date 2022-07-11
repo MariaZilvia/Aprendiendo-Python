@@ -1,0 +1,23 @@
+#4
+Hacer un programa para ingresar el radio de un círculo y se reporte su área y la longitud de la circunferencia. 
+
+R=radio
+
+Área= ∏*r^2
+Longitud= 2*∏*r
+
+r = float(input("Ingrese el valor del radio: "))
+import math
+área = math.pi * r**2
+longitud = 2 * math.pi * r
+
+print(f"La longitud de la circunferencia es {longitud:.2f} y el área es {area:.2f}")
+
+#5
+Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea saber cuánto deberá pagar finalmente por su compra.
+
+total = float(input("Ingrese el total de su cuenta: "))
+porciento = float(total-(total * 0.15))
+
+print(f"Usted debe pagar ${porciento:.2f} por su compra")
+
