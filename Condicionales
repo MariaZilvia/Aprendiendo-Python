@@ -1,0 +1,123 @@
+#EJ 1
+
+Hacer un programa que pida 2 números y se dé cuenta cual de ellos es par o si ambos lo son. 
+
+num1 = int(input("Escribe un numero: "))
+num2 = int(input("Escribe otro número: "))
+
+if num1%2==0:
+    print("El primer número es par")
+else:
+    print("El primer número es impar")
+if num2%2==0:
+    print("El segundo número es par")
+else:
+    print("El segundo número es impar")
+if num1%2==0 and num2%2==0:
+    print("Ambos son pares")
+if num1%2!=0 and num2%2!=0:
+    print("Ambos son impares")
+    #Correcciones
+num1 = int(input("Escribe un numero: "))
+num2 = int(input("Escribe otro número: "))
+
+if num1%2==0 and num2%2==0:
+    print("Ambos son pares")
+elif num1%2==0 and num2%2!=0:
+    print(f"{num1} es par")
+elif num1%2!=0 and num2%2==0:
+    print(f"{num2} es par")
+else:
+    print("Ambos son impares")
+
+ #Ej 2
+Hacer un programa que pida 3 números y determine cual es el mayor.
+
+num1 = int(input("Escribe un numero: "))
+num2 = int(input("Escribe un numero: "))
+num3 = int(input("Escribe un numero: "))
+
+if num3<num1>num2:
+    print(f"{num1} es el mayor")
+elif num3<num2>num1:
+    print(f"{num2} es el mayor")
+elif num2<num3>num1:
+    print(f"{num3} es el mayor")
+elif num1==num2==num3:
+    print("Son iguales")
+
+#Ej 3
+Hacer un programa que pide un carácter e indique si es una vocal o no.
+
+letra = input("Por favor,escribe una letra: ").lower()
+
+if letra=='a' or letra=='e' or letra=='i' or letra=='o' or letra=='u':
+    print("Es una vocal")
+else:
+    print("No es una vocal")
+
+    nota: letra = input("Por favor,escribe una letra: ")\
+letra = letra.lower()
+
+#Ej 4
+Construir un programa que simule el funcionamiento de una calculadora que puede realizar las 4 operaciones aritméticas básicas (suma, resta, multiplicación y división) El usuario debe especificar la operación con el primer carácter del nombre de la operación.
+
+S,s= suma
+R,r= resta
+P,p,M,m= multiplicación
+D,d = división  
+
+num1 = float(input("Digite un numero: "))
+num2 = float(input("Digite un numero: "))
+op = input("Escribe la operación que quiere realizar: ").upper()
+
+if op=='S':
+    suma = num1+num2
+    print(f"\n La suma es: {suma}")
+elif op=='R':
+    resta = num1-num2
+    print(f"\nLa resta es: {resta}")
+elif op=='M' or op=='P':
+    mult = num1*num2
+    print(f"\nLa multiplicación es: {mult:.1f}")
+elif op=='D':
+    div = num1/num2
+    print(f"\nLa división es: {div:.1f}")
+else:
+    print("\nSe equivoco de operación")
+
+#ej5
+Hacer un programa que simule un cajero automático con un saldo inicial de $1000 y tendrá el siguiente menu de opciones:
+
+1.Ingresar dinero
+2.Retirar dinero
+3.Mostrar dinero disponible
+4.Salir
+
+saldo = 1000
+print("...Bienvenide a su cajero MARY EN PYTHON...")
+print("\tMENU")
+print("1. Ingresar dinero en la cuenta")
+print("2. Retirar dinero de la cuenta")
+print("3. Mostrar dinero disponible")
+print("4. Salir")
+opción = int(input("Elija una opción de menu: "))
+
+print()
+if opción==1:
+    extra = float(input("Ingrese la cantidad que desea depositar: "))
+    saldo += extra
+    print(f"Su saldo actual es de ${saldo:.2f}")
+elif opción==2:
+    retirar = float(input("Ingrese la cantidad que desea retirar: "))
+    if retirar>saldo:
+        print("Saldo insuficiente")
+    else:
+        saldo -= retirar
+        print(f"Su saldo actual es de ${saldo:.2f}")
+elif opción==3:
+    print(f"Su saldo actual es de ${saldo}")
+elif opción==4:
+    print("Gracias por usar su cajero MARY EN PYTHON. Adiós")
+else:
+    print("Parece que hay un error. Inténtelo de nuevo")
